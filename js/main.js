@@ -4,6 +4,13 @@ const translationText = document.querySelector(".translation-text");
 const translationFlag = document.querySelector(".translation-flag");
 const resetButton = document.querySelector(".reset-button");
 
+//Reset function
+function reset(){
+  textInput.value = "";
+  translationText.innerText = "Traduzione";
+  translationFlag.innerText = "";
+}
+
 //API call function
 async function translate(text, lang, flag) {
   const url = `https://api.mymemory.translated.net/get?q=${text}&langpair=it|${lang}`;
@@ -27,8 +34,4 @@ langButtons.forEach(function(langButton){
 });
 
 //Add event listener to the resetButton
-resetButton.addEventListener("click", function(){
-  textInput.value = "";
-  translationText.innerText = "Traduzione";
-  translationFlag.innerText = "";
-})
+resetButton.addEventListener("click", reset);
