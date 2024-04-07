@@ -2,6 +2,7 @@ const langButtons = document.querySelectorAll(".lang-button");
 const textInput = document.querySelector(".text-input");
 const translationText = document.querySelector(".translation-text");
 const translationFlag = document.querySelector(".translation-flag");
+const resetButton = document.querySelector(".reset-button");
 
 //API call function
 async function translate(text, lang, flag) {
@@ -15,7 +16,7 @@ async function translate(text, lang, flag) {
   translationFlag.innerText = flag;
 }
 
-//Add click listener for each button
+//Add click listener for each langButton
 langButtons.forEach(function(langButton){
   langButton.addEventListener("click", function(){
     const text = textInput.value;
@@ -24,3 +25,10 @@ langButtons.forEach(function(langButton){
     translate(text, lang, flag);
   });
 });
+
+//Add event listener to the resetButton
+resetButton.addEventListener("click", function(){
+  textInput.value = "";
+  translationText.innerText = "Traduzione";
+  translationFlag.innerText = "";
+})
