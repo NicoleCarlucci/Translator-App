@@ -87,6 +87,59 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   /*
+   COLOR PALETTE
+   background color: rgb(234, 237, 240);
+   text color: black;
+   light-blue: rgb(128, 176, 255);
+   blue: rgb(76, 100, 242);
+   */
+
+   /* CSS Reset */
+   * {
+   	margin: 0;
+   	padding: 0;
+   	box-sizing: border-box;
+   }
+
+   /* Utilities */
+   .container {
+   	margin: 0 auto;
+   	max-width: 540px;
+   }
+
+   /* Generiche  */
+   body {
+   	padding: 16px;
+   	font-family: Inter, sans-serif;
+   	background-color: rgb(234, 237, 240);
+   }
+
+   header{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 16px;
+   }
+
+   h1{
+     color: rgb(255, 255, 255);
+     font-size: 20px;
+     text-transform: uppercase;
+   }
+
+   /*Panel Style*/
+   .panel{
+     background-color: rgb(76, 100, 242);
+     border-radius: 10px;
+     padding: 12px;
+   }
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -260,4 +313,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
